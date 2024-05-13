@@ -1,0 +1,25 @@
+describe('Test Kasir', () => {
+    beforeEach(() => {
+        cy.visit('https://kasirdemo.belajarqa.com/')
+        cy.loginKasir('elva@gmail.com','elva')
+      })
+    it.only('Add Product', () => {
+      cy.get('[href="/products"] > .css-ewi1jp').click()
+      cy.get('.css-1piskbq').click()
+      cy.get('#nama').type('kalkulator')
+      cy.get('#deskripsi').type('ATK')
+      //cy.get('[id="harga beli"]').clear().type('10000')
+      cy.typeKasir('[id="harga beli"]','10000')
+      //cy.get('[id="harga jual"]').clear().type('20000')
+      cy.typeKasir('[id="harga jual"]','20000')
+      //cy.get('#stok').clear().type('10')
+      cy.typeKasir('#stok','11')
+      cy.get('.chakra-input__right-addon').click()
+      cy.contains('Umum').click()
+      cy.get('.chakra-button').click()
+    })
+    it('Add Penjualan', () => {
+        cy.get('[href="/sales"] > .css-ewi1jp').click()
+        cy.get('.chakra-button').click()
+      })
+  })
