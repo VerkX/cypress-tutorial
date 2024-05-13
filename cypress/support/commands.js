@@ -9,8 +9,19 @@
 // ***********************************************
 //
 //
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add('loginKasir', (email, pass) => {
+    cy.get('#email').type(email)
+    cy.get('#password').type(pass)
+    cy.get('.chakra-button').click()
+    cy.get('.chakra-heading').should('be.visible')
+    cy.url().should('include', '/dashboard')
+})
+
+Cypress.Commands.add('typeKasir', (elemen, value) => {
+    cy.get(elemen)
+    .clear()
+    .type(value)
+})
 //
 //
 // -- This is a child command --
