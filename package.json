@@ -1,0 +1,22 @@
+{
+  "name": "trpla-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elvanisa/TRPLA-Cypress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elvanisa/TRPLA-Cypress/issues"
+  },
+  "homepage": "https://github.com/elvanisa/TRPLA-Cypress#readme",
+  "devDependencies": {
+    "cypress": "^13.9.0"
+  }
+}
